@@ -35,6 +35,18 @@ st.markdown(
         background: transparent;
     }
 
+    [data-testid="stToolbar"] {
+        color: #1D1D1D !important;
+    }
+
+    [data-testid="stToolbar"] button,
+    [data-testid="stToolbar"] a,
+    [data-testid="stToolbar"] svg {
+        color: #1D1D1D !important;
+        fill: #1D1D1D !important;
+        opacity: 1 !important;
+    }
+
     [data-testid="stAppViewContainer"] > .main {
         background:
             linear-gradient(var(--syzygy-green), var(--syzygy-green)) 0 0 / 100% 6px no-repeat,
@@ -91,24 +103,29 @@ st.markdown(
         margin-right: 0.45rem;
     }
 
-    .hero-title {
+    .stMarkdown h1.hero-title,
+    h1.hero-title {
         max-width: 760px;
         margin: 0;
-        color: var(--not-quite-black);
+        color: #1D1D1D !important;
+        -webkit-text-fill-color: #1D1D1D !important;
         font-family: "ProximaNovaA-Semibold", Arial, sans-serif;
         font-size: clamp(2.8rem, 6vw, 5.4rem);
         font-weight: 600;
         line-height: 1.02;
         letter-spacing: 0;
+        opacity: 1 !important;
     }
 
     .hero-copy {
         max-width: 590px;
         margin: 1.5rem 0 4rem;
-        color: var(--not-quite-black);
+        color: #1D1D1D !important;
+        -webkit-text-fill-color: #1D1D1D !important;
         font-size: 1.14rem;
         font-weight: 300;
         line-height: 1.5;
+        opacity: 1 !important;
     }
 
     .section-label {
@@ -116,14 +133,18 @@ st.markdown(
         align-items: center;
         gap: 0.65rem;
         margin-bottom: 1.2rem;
+        color: #1D1D1D !important;
+        -webkit-text-fill-color: #1D1D1D !important;
         font-family: "ProximaNovaA-Semibold", Arial, sans-serif;
         font-size: 1rem;
         font-weight: 600;
+        opacity: 1 !important;
     }
 
     .section-label::before {
         content: "/";
-        color: var(--syzygy-green);
+        color: #00EE4D !important;
+        -webkit-text-fill-color: #00EE4D !important;
         font-size: 1.35rem;
     }
 
