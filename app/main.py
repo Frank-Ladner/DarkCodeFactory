@@ -1,5 +1,7 @@
 import streamlit as st
 
+from bmi import calculate_bmi, classify_bmi
+
 st.set_page_config(
     page_title="Dark Code Factory - BMI-Rechner",
     page_icon="🚀",
@@ -21,27 +23,12 @@ with col2:
 
 # Button zum Berechnen
 if st.button("BMI berechnen"):
-    # BMI-Berechnung: BMI = Gewicht (kg) / (Größe (m))²
-    height_m = height_cm / 100
-    bmi = weight_kg / (height_m ** 2)
-    
-    # BMI-Kategorie bestimmen
-    if bmi < 18.5:
-        category = "Untergewicht"
-        color = "blue"
-    elif bmi < 25:
-        category = "Normalgewicht"
-        color = "green"
-    elif bmi < 30:
-        category = "Übergewicht"
-        color = "orange"
-    else:
-        category = "Adipositas"
-        color = "red"
-    
+    bmi = calculate_bmi(height_cm, weight_kg)
+    category, color = classify_bmi(bmi)
+
     # Ergebnisse anzeigen
     st.metric("Dein BMI", f"{bmi:.1f}")
-    
+
     if color == "green":
         st.success(f"Kategorie: {category} ✓")
     elif color == "blue":
