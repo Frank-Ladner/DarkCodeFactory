@@ -25,7 +25,10 @@ streamlit run app/main.py
 ```text
 DarkCodeFactory/
 +-- app/
+|   +-- bmi.py
 |   +-- main.py
++-- tests/
+|   +-- test_bmi.py
 +-- README.md
 +-- requirements.txt
 ```
@@ -38,6 +41,13 @@ DarkCodeFactory/
 - Anzeige des berechneten BMI
 - Einordnung in BMI-Kategorien
 - Farbige Rueckmeldung je nach Kategorie
+- Getrennte Fachlogik fuer BMI-Berechnung und Klassifizierung
+
+## Tests
+
+```bash
+pytest tests
+```
 
 ## Naechste moegliche Ausbaustufen
 
@@ -45,4 +55,4 @@ DarkCodeFactory/
 - Erklaertexte zu BMI-Kategorien ergaenzen
 - Verlauf mehrerer Berechnungen anzeigen
 - Optionale Speicherung oder Export der Ergebnisse
-- Tests fuer die BMI-Berechnungslogik ergaenzen
+- Weitere Tests fuer die Streamlit-Oberflaeche ergaenzen
